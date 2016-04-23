@@ -18,9 +18,12 @@
   </header>
   <footer class="post-info">
     <abbr>
-      {{ article.locale_date }} 
+	    {% if article.publishplace %} 
+	    Published {{ article.publishdate }} in {{ article.publishplace }}
+	    {% else %} {{ article.locale_date }} {% endif %}
+	    <!--
       {% if article.author %}
-         By <a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
+	 By <a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>-->
       {% endif %}  
     </abbr>
   </footer><!-- /.post-info -->

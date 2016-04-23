@@ -47,6 +47,7 @@
 </head>
 
 <body id="index" class="home">
+{% if NAV_BAR %}
     {% block navigation %}
      <div class="navigation">
         <ol class="nav">
@@ -57,6 +58,7 @@
         </ol>
       </div>
     {% endblock navigation %}
+    {% endif %}
         <header id="banner" class="body">
                 <div class="banner"><a href="{{ SITEURL }}">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></div>
         </header><!-- /#banner -->
@@ -68,13 +70,14 @@
           {% for p in PAGES %}
             <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
           {% endfor %}
-        {% else %}
+        {% elif DISPLAY_CATEGORIES_ON_MENU  %}
           {% for cat, null in categories %}
             <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
           {% endfor %}
         {% endif %}
         </ul></nav><!-- /#menu -->
         <div class="box">
+            <hr/>
             {% block content %}
             {% endblock %}
             <hr/>
@@ -97,10 +100,10 @@
 		</div>-->
                 <div class="social">
                     {% for name, link in SOCIAL %}
-                        <a href="{{ link }}"><i class="icon-{{ name }}"></i>  </a>
+                        <a href="{{ link }}"><i class="fa fa-{{ name }}"></i>  </a>
                     {% endfor %}
                     {% if EMAIL%}
-                        <a href="mailto:{{ EMAIL }}"><i class="icon-envelope"></i> </a>
+                        <a href="mailto:{{ EMAIL }}"><i class="fa fa-envelope"></i> </a>
                     {% endif %}
                 </div>
             </footer><!-- /#contentinfo -->
