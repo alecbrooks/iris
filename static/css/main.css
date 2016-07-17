@@ -1,7 +1,7 @@
 body         { font-family: 'Georgia', serif; font-size: 18px; color: #444; }
 a            { color: #004B6B; }
 a:hover      { color: #6D4100; }
-.box         { width: 740px; margin: 30px auto; }
+.box         { max-width: 740px; margin: 30px auto; }
 h2, h3, h4   { font-family: 'Marcellus', serif; font-weight: normal; color: #222;}
 h1           { margin: 0 0 30px 0;
        	background: no-repeat center;
@@ -112,3 +112,47 @@ hr { border: 0; height: 0; border-top: 1px solid rgba(0, 0, 0, 0.1);
 .align-center { display: block;
                 margin-left: auto;
                 margin-right: auto}
+
+/* Fonts */
+@font-face {
+  font-family: 'Marcellus';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/theme/fonts/Marcellus-regular.eot');
+  src: url('/theme/fonts/Marcellus-regular.eot?#iefix') format('embedded-opentype'),
+       local('Marcellus'),
+       local('Marcellus-regular'),
+       url('/theme/fonts/Marcellus-regular.woff2') format('woff2'),
+       url('/theme/fonts/Marcellus-regular.woff') format('woff'),
+       url('/theme/fonts/Marcellus-regular.ttf') format('truetype'),
+       url('/theme/fonts/Marcellus-regular.svg#Marcellus') format('svg');
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/theme/fonts/Inconsolata-regular.eot');
+  src: url('/theme/fonts/Inconsolata-regular.eot?#iefix') format('embedded-opentype'),
+       local('Inconsolata'),
+       local('Inconsolata-regular'),
+       url('/theme/fonts/Inconsolata-regular.woff2') format('woff2'),
+       url('/theme/fonts/Inconsolata-regular.woff') format('woff'),
+       url('/theme/fonts/Inconsolata-regular.ttf') format('truetype'),
+       url('/theme/fonts/Inconsolata-regular.svg#Inconsolata') format('svg');
+}
+
+@font-face {
+  font-family: 'The Girl Next Door';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/theme/fonts/The-Girl-Next-Door-regular.eot');
+  src: url('/theme/fonts/The-Girl-Next-Door-regular.eot?#iefix') format('embedded-opentype'),
+       local('The Girl Next Door'),
+       local('The-Girl-Next-Door-regular'),
+       url('/theme/fonts/The-Girl-Next-Door-regular.woff2') format('woff2'),
+       url('/theme/fonts/The-Girl-Next-Door-regular.woff') format('woff'),
+       url('/theme/fonts/The-Girl-Next-Door-regular.ttf') format('truetype'),
+       url('/theme/fonts/The-Girl-Next-Door-regular.svg#TheGirlNextDoor') format('svg');
+}
+
