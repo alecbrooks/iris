@@ -72,6 +72,10 @@ div.navigation {
                 height: 26px;
               }
 
+img {
+	max-width: 100%;
+}
+
 .current a{color: #666}
 /* social */
 .social      {margin:10px 0 10px 0; font-size: 40px; text-align: center;}
