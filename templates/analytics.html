@@ -51,10 +51,15 @@
   (function() {
 	  _paq.push(['setTrackerUrl',  trackerUrl]);
 	  _paq.push(['setSiteId', siteId]);
-	  _paq.push(['setApiToken', apiToken]);
 	  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
 	  g.type='text/javascript'; g.async=true; g.defer=true; g.src=srcUrl; s.parentNode.insertBefore(g,s);
   })();
 </script>
 <!-- End Piwik Code -->
+{% endif %}
+
+{% if GOATCOUNTER_URL %}
+
+<script data-goatcounter="https://{{ GOATCOUNTER_URL }}/count"
+        async src="//{{ GOATCOUNTER_URL }}/count.js"></script>
 {% endif %}
